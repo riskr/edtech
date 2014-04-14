@@ -41,7 +41,7 @@
 	color: #fff;
 }
 .logo{
-	padding-top: 200px;
+	padding-top: 100px;
 }
 .social-buttons{
 	padding-bottom: 150px;
@@ -50,11 +50,32 @@
 	font-family:  'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Arial, Helvetica, sans-serif; 
 	font-size: 16px;
 }
-.form-submit input{
-	width: 30%;
+#thanks-paragragh{
+	font-family:  'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Arial, Helvetica, sans-serif; 
+	font-size: 16px;
+}
+.pure-form input{
+	width: 25%;
 	margin-bottom: 5px;
 	text-align: center;
 	height: 45px;
+	margin-left: -30px;
+}
+
+.mob input{
+	margin-bottom: 5px;
+	text-align: center;
+	height: 45px;
+	margin-left: -30px;
+	width: 200px;
+}
+.social-buttons a{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.social-buttons a:hover{
+	color: #354b95;
+	opacity: 0.6;
 }
 
 .pure-button{
@@ -76,14 +97,17 @@
 	text-decoration: none;
 }
 
-.mob{
-	margin-left: 30%;
-	margin-right: 30%;
-}
 .cor{
 	background-color: #fff;
 	height: 100px;
 	bottom: 0;
+}
+#saveForm{
+	background: #354b95;
+	font-family:  'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif; 
+	border: 1px solid #354b95;
+	border-radius: 5%;
+	color: #fff;
 }
 
 #owl-demo .item img{
@@ -91,26 +115,88 @@
     width: 100%;
     height: auto;
 }
+.hide{
+	display: none;
+}
+.listhere{
+	list-style: none;
+	margin-left: -10px;
+}
+.container{
+	height: 200px;
+}
+body{
+	min-height: 100%;
+	max-height: 100%;
+}
+.left{
+	padding-top: 10px;
+}
+.spon-imgs img{
+	height: 50px;
+}
+
+.more-link:hover{
+	color: #354b95;
+	opacity: 0.6;
+	padding: 10px 10px 10px 10px;
+	border: 1px solid #354b95;
+	text-decoration: none;
+}
+#thanks-paragraph{
+	font-family:  'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif; 
+}
+@media only screen and (max-width: 767px) {
+.spon-imgs{
+	padding-top: 80px;
+}
+.logo{
+	padding-top: 50px;
+}
+.more-link{
+	color: #c1c1c1;
+	padding: 5px 5px 5px 5px;
+	border: 1px solid #c1c1c1;
+	text-decoration: none;
+}
+.more-link:hover{
+	color: #354b95;
+	opacity: 0.6;
+	padding: 5px 5px 5px 5px;
+	border: 1px solid #354b95;
+	text-decoration: none;
+}
+.social-buttons{
+	padding-bottom: 50px;
+}
+.hero-text{
+	margin-top: 100px;
+	margin-bottom: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+}
 </style>
 <script type="text/javascript">
-	$(document).ready(function() {
- 
-  $("#owl-demo").owlCarousel({
- 
-      navigation : false, // Show next and prev buttons
-      slideSpeed : 1000,
-      paginationSpeed : 2000,
-      singleItem:true,
-      autoPlay: 3000
- 
-      // "singleItem:true" is a shortcut for:
-      // items : 1, 
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
- 
-  });
+
+$(document).ready(function() {
+
+$("#owl-demo").owlCarousel({
+
+    navigation : false, // Show next and prev buttons
+    slideSpeed : 1000,
+    paginationSpeed : 2000,
+    singleItem:true,
+    autoPlay: 3000
+
+    // "singleItem:true" is a shortcut for:
+    // items : 1, 
+    // itemsDesktop : false,
+    // itemsDesktopSmall : false,
+    // itemsTablet: false,
+    // itemsMobile : false
+
+});
  
 });
 </script>
@@ -163,33 +249,94 @@
 		</div>
 	</div>
 	<div class="pure-u-1-2 coverback">
+		<div class="pure-g-r spon-imgs">
+			<div class="pure-u-1-3 left">
+				<a href="http://www.emergeventurelab.com/"><img src="left.png" alt=""></a>
+		</div>
+		<div class="pure-u-1-3 mid">
+			 <a href="http://www.etoncollege.com/"><img src="mid.png" alt=""></a>
+		</div>
+		<div class="pure-u-1-3 right">
+			<a href="http://www.sbs.ox.ac.uk/"> <img src="right.png" alt=""></a>
+		</div>
+		</div>
 		<div class="logo">
 			<img src="em-logo.png" alt="edtech">
 		</div>
 		<div class="logo-text">
 			<p> building edtech? </p>
 		</div>
+	<div id="form-to-hide">
 		<div class="form-submit">
 			<div class="pure-hidden-desktop pure-hidden-tablet">
-				<form class="pure-form mob">
-		    		 <input class="pure-input-1" id="mobinput" type="email" placeholder="Email">
-		    		<br>
-		    		 <button type="submit" class="pure-button pure-input-1 pure-button-primary">Submit</button>
-		    	</form>
+<form id="form3" name="form3" class="wufoo topLabel page  mob" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+      action="https://emergeventurelab.wufoo.eu/forms/qco3xmq1cz32h9/#public">
+  
+<ul class="listhere">
+
+<li id="foli6" class="notranslate      ">
+<div>
+<input id="Field6" name="Field6" type="email" spellcheck="false" class="field text medium pure-input-1" value="" maxlength="255" tabindex="1" required /> 
+</div>
+</li> <li class="buttons ">
+<div>
+
+                    <input id="saveForm" name="saveForm" class="btTxt submit" 
+    type="submit" value="Submit"
+ /></div>
+</li>
+
+<li class="hide">
+<label for="comment">Do Not Fill This Out</label>
+<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+<input type="hidden" id="idstamp" name="idstamp" value="rpbmPgyo+uABLFh8LuhIdSTbD4vowOvt7OJV4KhhW5E=" />
+</li>
+</ul>
+</form> 
+
+
 	    	</div>
 	    	<div class="pure-hidden-phone">
-				<form class="pure-form">
-		    		 <input class="pure-input-1-4" id="" type="email" placeholder="Email">
-		    		<br>
-		    		 <button type="submit" class="pure-button pure-input-1-4 pure-button-primary">Submit</button>
-		    	</form>
+					<form id="form3" name="form3" class="wufoo topLabel page pure-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+      action="https://emergeventurelab.wufoo.eu/forms/qco3xmq1cz32h9/#public">
+  
+<ul class="listhere">
+
+<li id="foli6" class="notranslate      ">
+<div>
+<input id="Field6" name="Field6" type="email" spellcheck="false" class="field text medium pure-input-1-4" value="" maxlength="255" tabindex="1" required /> 
+</div>
+</li> <li class="buttons ">
+<div>
+
+                    <input id="saveForm" name="saveForm" class="btTxt submit" 
+    type="submit" value="Submit"
+ /></div>
+</li>
+
+<li class="hide">
+<label for="comment">Do Not Fill This Out</label>
+<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+<input type="hidden" id="idstamp" name="idstamp" value="rpbmPgyo+uABLFh8LuhIdSTbD4vowOvt7OJV4KhhW5E=" />
+</li>
+</ul>
+</form> 
+		    
 	    	</div>
 	    	<p>(Share your email, and we'll get in touch)</p>
 		</div>
+		<p id="thanks-paragraph" style="display:none;">Thanks for reaching out, we shall get in touch soon.</p>
+	</div>
 		<div class="social-buttons">
-			<a href="https://www.facebook.com/emergeventurelab"> <i class="fa fa-facebook"></i> </a>
-			<i class="fa fa-twitter"></i>
-			<i class="fa fa-google-plus"></i>
+			<a href="https://www.facebook.com/emergeventurelab/"> 
+				<i class="fa fa-facebook"> </i>
+			</a>
+			<a href="https://twitter.com/emergelab">
+				<i class="fa fa-twitter"> </i>
+			</a>
+			<a href="https://twitter.com/emergelab">
+				<i class="fa fa-google-plus"> </i>
+			</a>
 		</div>
 		<div class="pure-u-1 footer">
 			<a href="http://www.emergeventurelab.com/" class="more-link">MORE ABOUT EMERGE EDUCATION</a>
@@ -199,4 +346,26 @@
 </div>
 
 </body>
+<script type="text/javascript">
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+	var me = getUrlVars()["thanks"];
+if(new String(me).valueOf() == new String("true#public").valueOf()){
+	var y = document.getElementsByClassName('form-submit');
+	var aNode = y[0];
+	aNode.style.display ="none";
+	var x = document.getElementById('thanks-paragraph');
+	x.style.display = "block";
+}
+</script>
 </html>
